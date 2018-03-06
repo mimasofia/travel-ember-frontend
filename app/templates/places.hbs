@@ -1,12 +1,11 @@
-lololololol
-
 
 {{#each model as |place|}}
   <h4>
     {{place.name}}
+    <button {{action 'delete' place}}>Delete</button>
   </h4>
 {{/each}}
 
-{{#link-to 'places.new'}}New Place{{/link-to}}
+{{#link-to 'places.new'}}<button>Add New Place</button>{{/link-to}}
 {{!-- {{places.new}} --}}
 {{outlet}}
