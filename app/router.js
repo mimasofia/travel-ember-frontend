@@ -14,7 +14,9 @@ Router.map(function () {
   this.route('places', function() {
     this.route('new');
   });
-  this.route('place', { path: '/places/:place_id'});
+  this.route('place', { path: '/places/:place_id'}, function() {
+    this.route('edit');
+  });
 });
 
 export default Router;

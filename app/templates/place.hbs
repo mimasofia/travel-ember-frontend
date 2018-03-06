@@ -1,6 +1,8 @@
 
 <h4>{{model.name}}</h4>
 <button {{action 'delete' model}}>Delete</button>
-{{input value=model.name}}
+{{!-- {{input value=model.name}}
 <button {{action 'edit' model}}>EDIT</button>
-{{log 'model is' model}}
+{{log 'model is' model}} --}}
+{{#link-to 'place.edit'}}<button>Edit</button>{{/link-to}}
+{{outlet}}
