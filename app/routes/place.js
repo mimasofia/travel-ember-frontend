@@ -10,6 +10,11 @@ export default Route.extend({
       console.log('PLACE is', place)
       return place.destroyRecord()
         .then(() => this.transitionTo('places'))
+    },
+    edit(place) {
+      console.log('place is', place)
+      console.log('edit in place')
+      return place.save()
     }
   }
 });
