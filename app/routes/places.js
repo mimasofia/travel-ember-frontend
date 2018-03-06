@@ -6,10 +6,10 @@ export default Route.extend({
     // return this.get('store').createRecord('place', {})
   },
   actions: {
-    delete(place){
-      console.log('maybe')
-      return place.destroyRecord()
-    },
+    // delete(place){
+    //   console.log('maybe')
+    //   return place.destroyRecord()
+    // },
     edit (place) {
       // console.log('IN PLACE PLEASE WORK')
       console.log(place)

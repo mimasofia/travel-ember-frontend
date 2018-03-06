@@ -6,10 +6,10 @@ export default Route.extend({
     return this.get('store').findRecord('place', id)
   },
   actions: {
-    // edit (model) {
-    //   console.log('IN PLACE PLEASE WORK')
-    //   console.log('MODEL IS', model)
-    //   return this.get('place').save()
-    // }
+    delete (place) {
+      console.log('PLACE is', place)
+      return place.destroyRecord()
+        .then(() => this.transitionTo('places'))
+    }
   }
 });
