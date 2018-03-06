@@ -9,6 +9,12 @@ export default Route.extend({
     delete(place){
       console.log('maybe')
       return place.destroyRecord()
+    },
+    edit (place) {
+      // console.log('IN PLACE PLEASE WORK')
+      console.log(place)
+      // console.log('STOREt', this.get('store').find('place'))
+      return place.save()
     }
   }
 });
