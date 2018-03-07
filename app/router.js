@@ -17,7 +17,6 @@ Router.map(function () {
   this.route('place', { path: '/places/:place_id'}, function() {
     this.route('edit');
   });
-  this.route('items');
 });
 
 export default Router;
