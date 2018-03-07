@@ -1,8 +1,12 @@
 
 <h4>{{model.name}}</h4>
 <button {{action 'delete' model}}>Delete</button>
-{{!-- {{input value=model.name}}
-<button {{action 'edit' model}}>EDIT</button>
-{{log 'model is' model}} --}}
 {{#link-to 'place.edit'}}<button>Edit</button>{{/link-to}}
+
 {{outlet}}
+
+<ul>
+  {{#each model.items as |item|}}
+    <li>{{item.itemName}}</li>
+  {{/each}}
+</ul>
