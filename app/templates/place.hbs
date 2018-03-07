@@ -7,6 +7,9 @@
 
 <ul>
   {{#each model.items as |item|}}
-    <li>{{item.itemName}}</li>
+    <li>{{item.itemName}}<button {{action 'deleteItem' item}}>Del</button></li>
+    {{!-- {{log 'item' item}} --}}
   {{/each}}
+
 </ul>
+{{!-- {{log 'MODEL' model}} --}}
