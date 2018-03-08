@@ -5,8 +5,8 @@
     {{#each place.items as |item|}}
       <li class='item-spacing'>{{item.itemName}}<button {{action 'deleteItem' item}} class='delete-button'>Remove</button></li>
       {{/each}}
-      <li>{{input value=newItem.itemName placeholder='New Item'}}</li><button {{action 'save' place}}>Save Item</button>
-      {{log 'place in travel hbs' place}}
-      {{!-- {{log 'model newITEM' newItem}} --}}
+      <form  {{action 'save' place on="submit"}}>
+      <li>{{input required=true value=newItem.itemName placeholder='New Item'}}</li><button>Save Item</button>
+    </form>
     </ul>
 </div>

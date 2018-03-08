@@ -1,6 +1,8 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  flashMessages: service(),
   model (params) {
     // return Ember.RSVP.hash({
     //   place: this.get('store').findRecord('place', params.place_id),
@@ -15,6 +17,10 @@ export default Route.extend({
       console.log('PLACE is', place)
       return place.destroyRecord()
         .then(() => this.transitionTo('places'))
+        .then(() => this.get('flashMessages').success('Successfully Deleted'))
+        .catch(() => {
+          this.get('flashMessages').danger('There was a problem. Please try again.')
+        })
     },
       // deleteItem (item) {
       //   // console.log('item', item)
@@ -29,9 +35,13 @@ export default Route.extend({
       //   return item.save()
       // }
       addItem(newIten) {
-        console.log('in place for items')
+      // console.log('in place for items')
       const item = this.get('store').createRecord('item', newIten)
       return item.save()
-    }
-  }
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.')
+      })
+    },
+  },
 });

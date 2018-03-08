@@ -1,4 +1,6 @@
 <h4>Input new Place</h4>
-{{input value=model.name placeholder="New Place"}}
-<button {{action 'save' model}}>Save</button>
+<form {{action 'save' model on='submit'}}>
+{{input required=true value=model.name placeholder="New Place"}}
+<button >Save</button>
 {{#link-to 'places'}}<button>Close</button>{{/link-to}}
+</form>
