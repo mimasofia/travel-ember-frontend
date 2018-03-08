@@ -11,9 +11,11 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('places', function() {
-    this.route('new');
-  });
+  // this.route('places', function() {
+  //   this.route('new');
+  // });
+  this.route('places');
+  this.route('new');
   this.route('place', { path: '/places/:place_id'}, function() {
     this.route('edit');
   });

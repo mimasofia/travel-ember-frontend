@@ -10,6 +10,7 @@ actions: {
       // what to associate this new item with the list
       newThing.place = this.get('place')
       this.sendAction('addItem', newThing)
+      this.set('newItem.itemName', '');
     },
       deleteItem (item) {
         // console.log('item', item)

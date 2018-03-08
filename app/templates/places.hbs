@@ -1,10 +1,11 @@
+<h1>These are you Places! Click on one for more details!</h1>
 
-{{#each model as |place|}}
+{{#each model.places as |place|}}
   <h4> {{#link-to 'place' place}}
     {{place.name}}
     {{/link-to}}
   </h4>
 {{/each}}
 
-{{#link-to 'places.new'}}<button>Add New Place</button>{{/link-to}}
+{{#link-to 'new'}}<button>Add New Place</button>{{/link-to}}
 {{outlet}}

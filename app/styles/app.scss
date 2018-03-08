@@ -1,15 +1,38 @@
 @import "ember-bootstrap/bootstrap";
 
-h4 {
+h1{
+  text-align: center;
   font-size: 30px;
 }
-
-.delete-button{
+h4 {
+  font-size: 30px;
+  color: #9c448f;
+}
+h5 {
+  font-size: 20px;
+  color: #ac927c;
+}
+li {
+  color: #6f982f;
+  margin-top: 6px;
+}
+.delete-button-place {
   background-color: #cc1212;
   color: #fff;
 }
-
+.delete-button{
+  background-color: #cc1212;
+  color: #fff;
+  float: right;
+}
 .edit-button {
   background-color: #416de0;
   color: #fff;
+}
+.item-spacing {
+  margin-bottom: 5px;
+}
+.items-style {
+  margin-top: 15px;
+  width: 50%;
 }

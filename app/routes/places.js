@@ -2,7 +2,12 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model () {
-    return this.get('store').findAll('place');
+    // return this.get('store').findAll('place');
+    return Ember.RSVP.hash({
+      places: this.get('store').findAll('place').then(function (result) {
+        return result.filterBy('isNew', false)
+      })
+    })
     // return this.get('store').createRecord('place', {})
   },
   actions: {
