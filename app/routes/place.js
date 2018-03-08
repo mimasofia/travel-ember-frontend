@@ -14,7 +14,7 @@ export default Route.extend({
   },
   actions: {
     delete (place) {
-      console.log('PLACE is', place)
+      // console.log('PLACE is', place)
       return place.destroyRecord()
         .then(() => this.transitionTo('places'))
         .then(() => this.get('flashMessages').success('Successfully Deleted'))

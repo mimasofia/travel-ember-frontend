@@ -8,7 +8,7 @@ export default Route.extend({
 },
   actions: {
     save(newPlace) {
-      console.log('god work please')
+      // console.log('god work please')
       return newPlace.save()
         .then(() => this.transitionTo('places'))
         .then(() => this.get('flashMessages').success('Successfully Added'))
