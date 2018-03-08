@@ -1,0 +1,8 @@
+<ul>
+  {{#each place.items as |item|}}
+    <li>{{item.itemName}}<button {{action 'deleteItem' item}} class='delete-button'>X</button></li>
+  {{/each}}
+  <li>{{input value=newItem.itemName}}</li><button {{action 'save' place}}>Save</button>
+  {{log 'place in travel hbs' place}}
+  {{!-- {{log 'model newITEM' newItem}} --}}
+</ul>

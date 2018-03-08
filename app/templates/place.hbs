@@ -1,14 +1,17 @@
 
-<h4>{{model.place.name}}</h4>
+<h4>{{model.name}}</h4>
+{{!-- {{log 'PLACE NAME' model}} --}}
 <button {{action 'delete' model.place}} class='delete-button'>Delete</button>
 {{#link-to 'place.edit'}}<button class='edit-button'>Edit</button>{{/link-to}}
 
 {{outlet}}
 
-<ul>
+{{travel-list place=model
+              addItem='addItem'}}
+{{!-- <ul>
   {{#each model.place.items as |item|}}
     <li>{{item.itemName}}<button {{action 'deleteItem' item}} class='delete-button'>X</button></li>
   {{/each}}
   <li>{{input value=model.newItem.itemName}}</li><button {{action 'saveItem' model.newItem model.place}}>Save</button>
   {{log 'model newITEM' model.newItem}}
-</ul>
+</ul> --}}
