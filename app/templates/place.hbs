@@ -1,7 +1,7 @@
 
 <h4>{{model.name}}</h4>
 {{!-- {{log 'PLACE NAME' model}} --}}
-<button {{action 'delete' model.place}} class='delete-button'>Delete</button>
+<button {{action 'delete' model}} class='delete-button'>Delete</button>
 {{#link-to 'place.edit'}}<button class='edit-button'>Edit</button>{{/link-to}}
 
 {{outlet}}
