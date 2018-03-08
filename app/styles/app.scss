@@ -1,1 +1,15 @@
 @import "ember-bootstrap/bootstrap";
+
+h4 {
+  font-size: 30px;
+}
+
+.delete-button{
+  background-color: #cc1212;
+  color: #fff;
+}
+
+.edit-button {
+  background-color: #416de0;
+  color: #fff;
+}
