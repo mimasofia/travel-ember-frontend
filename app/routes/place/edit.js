@@ -7,7 +7,7 @@ export default Route.extend({
   // },
   actions: {
     edit(place) {
-      // console.log('place is', place)
+      console.log('place is', place)
       console.log('edit in place')
       return place.save()
         .then(()=> this.transitionTo('place'))
