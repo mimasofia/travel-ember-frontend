@@ -5,6 +5,10 @@ h1{
   font-size: 30px;
   color: #feb94b;
 }
+h3 {
+  text-align: center;
+  color: #feb94b;
+}
 h4 {
   font-size: 30px;
   color: #9c448f;
@@ -36,4 +40,11 @@ li {
 .items-style {
   margin-top: 15px;
   width: 50%;
+}
+.collapse{
+  background-color: #99be8f;
+}
+.places-style{
+  border: 1px solid #4e8064;
+  padding: 8px;
 }
