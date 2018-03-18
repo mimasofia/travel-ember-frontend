@@ -3,7 +3,7 @@
   <ul>
     <h5>Items to take with you!</h5>
     {{#each place.items as |item|}}
-      <li class='item-spacing'>{{item.itemName}}<button {{action 'deleteItem' item}} class='delete-button'>Remove</button></li>
+      <li class='item-spacing'><span class='item-font'>{{item.itemName}}</span><button {{action 'deleteItem' item}} class='delete-button'>Remove</button></li>
       {{/each}}
       <form  {{action 'save' place on="submit"}}>
       <li>{{input required=true value=newItem.itemName placeholder='New Item'}}</li><button>Save Item</button>

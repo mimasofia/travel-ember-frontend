@@ -19,6 +19,7 @@ Router.map(function () {
   this.route('place', { path: '/places/:place_id'}, function() {
     this.route('edit');
   });
+  this.route('home-message');
 });
 
 export default Router;

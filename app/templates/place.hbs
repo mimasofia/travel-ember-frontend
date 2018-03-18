@@ -1,5 +1,5 @@
 
-<h4>{{model.name}}</h4>
+<h4><span class='place-name'>{{model.name}}</span></h4>
 {{!-- {{log 'PLACE NAME' model}} --}}
 <button {{action 'delete' model}} class='delete-button-place'>Delete Place</button>
 {{#link-to 'place.edit'}}<button class='edit-button'>Edit Place</button>{{/link-to}}
