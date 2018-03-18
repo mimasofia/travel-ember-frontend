@@ -3,11 +3,11 @@
 h1{
   text-align: center;
   font-size: 30px;
-  color: #feb94b;
+  color: #e7ac9b;
 }
 h3 {
   text-align: center;
-  color: #feb94b;
+  color: #888399;
 }
 h4 {
   font-size: 30px;
@@ -18,8 +18,8 @@ h5 {
   color: #ac927c;
 }
 li {
-  color: #6f982f;
-  margin-top: 6px;
+  color: #65617b;
+  // margin-top: 2px;
 }
 .delete-button-place {
   background-color: #cc1212;
@@ -41,10 +41,38 @@ li {
   margin-top: 15px;
   width: 50%;
 }
-.collapse{
-  background-color: #99be8f;
+.item-font {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
 }
-.places-style{
-  border: 1px solid #4e8064;
-  padding: 8px;
+.collapse{
+  background-color: #f5e9d9;
+}
+// .places-style{
+//   border: 1px solid #4e8064;
+//   padding: 8px;
+// }
+.name-border{
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+.name-place-style {
+  color: #4e8064;
+  font-family: 'Shadows Into Light', cursive;
+}
+.app-explain{
+  font-size: 16px;
+  text-align: center;
+}
+.title-name,
+.user-name {
+  font-family: 'Indie Flower', cursive;
+  color: 	#9c448f;
+}
+.user-name{
+  color: #790a1a;
+}
+.place-name{
+  font-size: 40px;
+  font-family: 'Indie Flower', cursive;
 }

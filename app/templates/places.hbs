@@ -1,18 +1,21 @@
-{{!-- <h1>These are your Places! Click one for more details!</h1> --}}
-{{!-- if (places.length === 0) {
-  $('h1').text('To start add a new place')
-} else {
-  $('h1').text('These are your Places! Click one for more details!')
-} --}}
+{{#if model.places}}
 <h1>These are your Places! Click one for more details!</h1>
 <div class='places-style'>
+
 {{#each model.places as |place|}}
-  <h4> {{#link-to 'place' place}}
-    {{place.name}}
-    {{/link-to}}
-  </h4>
+  <div class='name-border'>
+    <h4> {{#link-to 'place' place class='name-place-style'}}
+      {{place.name}}
+      {{/link-to}}
+    </h4>
+  </div>
 {{/each}}
 
 {{#link-to 'new'}}<button>Add New Place</button>{{/link-to}}
 {{outlet}}
 </div>
+{{else}}
+<h3>Looks like you don't have any places saved. Add a place with the "Add New Place" button!</h3>
+{{#link-to 'new'}}<button>Add New Place</button>{{/link-to}}
+{{outlet}}
+{{/if}}
