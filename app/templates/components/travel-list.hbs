@@ -1,11 +1,21 @@
-
+{{!-- this is the 'bottom' level --}}
 <div class='items-style'>
   <ul>
     <h5>Items to take with you!</h5>
+    {{!-- each place has a resource 'linked' to it. places have many items and
+    item hace one place (backend) so each item from a places data is put as item
+    to be used further --}}
     {{#each place.items as |item|}}
+    {{!-- each item has its own name so that is displayed for each --}}
+    {{!-- each one also has its own delete buttom which send data of the item
+    to the js file that is 'married' to the component travel-list --}}
       <li class='item-spacing'><span class='item-font'>{{item.itemName}}</span><button {{action 'deleteItem' item}} class='delete-button'>Remove</button></li>
       {{/each}}
+      {{!-- had to put this is a form to prevent an empty string being saved so
+      added required true --}}
       <form  {{action 'save' place on="submit"}}>
+        {{!-- newItem is the empty object in the JS for this component need
+        to create a new item --}}
       <li>{{input required=true value=newItem.itemName placeholder='New Item'}}</li><button>Save Item</button>
     </form>
     </ul>

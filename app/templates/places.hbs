@@ -1,21 +1,31 @@
+{{!--this is the highest level --}}
+{{!-- if the model is able to find a place then it will display the information --}}
 {{#if model.places}}
 <h1>These are your Places! Click one for more details!</h1>
 <div class='places-style'>
 
+{{!-- take each place that had been created and make it so we can use place
+to refer to them --}}
 {{#each model.places as |place|}}
   <div class='name-border'>
+    {{!-- clicking on the name of the place links to the middle level with
+    the info passed to the middle layer with 'data-down'--}}
     <h4> {{#link-to 'place' place class='name-place-style'}}
+      {{!-- becuase we made each model.places as place we can write place.name
+      to get the name for EACH place --}}
       {{place.name}}
       {{/link-to}}
     </h4>
   </div>
 {{/each}}
-
+{{!-- this links to a new route and hbs for input/ creation of a new place --}}
 {{#link-to 'new'}}<button>Add New Place</button>{{/link-to}}
 {{outlet}}
 </div>
 {{else}}
+{{!-- if there are no places this shows up until a new place is made --}}
 <h3>Looks like you don't have any places saved. Add a place with the "Add New Place" button!</h3>
+{{!-- this link to the route to add new places --}}
 {{#link-to 'new'}}<button>Add New Place</button>{{/link-to}}
 {{outlet}}
 {{/if}}

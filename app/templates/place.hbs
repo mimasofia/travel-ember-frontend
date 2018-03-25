@@ -1,14 +1,25 @@
-
+{{!-- this is th emiddle level --}}
+{{!-- this takes the name which is the data that each created place has and
+displays it --}}
 <h4><span class='place-name'>{{model.name}}</span></h4>
 {{!-- {{log 'PLACE NAME' model}} --}}
+{{!-- the action 'delete' is in the JS for place that it is 'married' to --}}
+{{!-- data being sent to the 'delete' action is the model utself which contains
+all the data for a particular place --}}
 <button {{action 'delete' model}} class='delete-button-place'>Delete Place</button>
+{{!-- links to another route that allows for editing of the place name --}}
 {{#link-to 'place.edit'}}<button class='edit-button'>Edit Place</button>{{/link-to}}
+{{!-- links back to the top level places --}}
 {{#link-to 'places'}}<button>Back to ALL PLACES</button>{{/link-to}}
 
 {{outlet}}
-
+{{!-- this is a component used to add new items in the middle layer and save
+them --}}
 {{travel-list place=model
               addItem='addItem'}}
+
+{{!-- was original idea when trying not to use a compnent left it here for
+future reference --}}
 {{!-- <ul>
   {{#each model.place.items as |item|}}
     <li>{{item.itemName}}<button {{action 'deleteItem' item}} class='delete-button'>X</button></li>
